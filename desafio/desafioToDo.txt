@@ -1,0 +1,7 @@
+O que vamos fazer?
+
+[x] Inicializar dados do cliente
+[x] Menu de opções
+[x] Visualização do saldo
+[x] Envia valor
+[x] Receve valor
