@@ -1,6 +1,8 @@
 package br.com.alura.screenmatch.models;
 
-public class Film extends Title {
+import br.com.alura.screenmatch.calculations.Classifiable;
+
+public class Film extends Title implements Classifiable {
     private String director;
 
     public String getDirector() {
@@ -9,5 +11,10 @@ public class Film extends Title {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    @Override
+    public int getClassification() {
+        return (int) calculateAverage() / 2;
     }
 }
