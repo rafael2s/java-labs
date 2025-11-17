@@ -1,10 +1,11 @@
+package br.com.alura.screenmatch.main;
+
 import br.com.alura.screenmatch.calculations.RecommendationFilter;
 import br.com.alura.screenmatch.calculations.TimeCalculator;
 import br.com.alura.screenmatch.models.Episode;
 import br.com.alura.screenmatch.models.Film;
 import br.com.alura.screenmatch.models.Serie;
 
-import java.sql.Time;
 import java.util.ArrayList;
 
 public class Main {
