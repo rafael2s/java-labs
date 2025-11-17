@@ -4,20 +4,20 @@ import br.com.alura.screenmatch.models.Film;
 import br.com.alura.screenmatch.models.Serie;
 import br.com.alura.screenmatch.models.Title;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class MainWithList {
     public static void main(String[] args) {
-        Film favorito = new Film("The Matrix", 1999);
-        favorito.rate(10);
+        Film favorite = new Film("The Matrix", 1999);
+        favorite.rate(10);
 
         Film outro = new Film("John Wick", 2014);
         outro.rate(9);
 
         Serie serie = new Serie("La Casa de Papel", 2017);
 
-        ArrayList<Title> lista = new ArrayList<>();
-        lista.add(favorito);
+        List<Title> lista = new LinkedList<>();
+        lista.add(favorite);
         lista.add(outro);
         lista.add(serie);
 
@@ -27,5 +27,22 @@ public class MainWithList {
                 System.out.println("Classificação: " + filme.getClassification());
             }
         }
+
+        ArrayList<String> searchArtist = new ArrayList<>();
+        searchArtist.add("Adam Sandler");
+        searchArtist.add("Paul Walker");
+        searchArtist.add("Brad Pitt");
+        System.out.println(searchArtist);
+
+        Collections.sort(searchArtist);
+        System.out.println("Depois da ordenação:");
+        System.out.println(searchArtist);
+
+        System.out.println("Lista de titulos ordenados");
+        Collections.sort(lista);
+        System.out.println(lista);
+        lista.sort(Comparator.comparing(Title::getReleaseYear));
+        System.out.println("Ordenando por ano!");
+        System.out.println(lista);
     }
 }
