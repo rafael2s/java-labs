@@ -5,6 +5,7 @@ import br.com.alura.screenmatch.models.Film;
 import br.com.alura.screenmatch.models.Serie;
 
 import java.sql.Time;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -52,5 +53,19 @@ public class Main {
         episode.setSerie(lost);
         episode.setTotalViews(300);
         filtrar.filter(episode);
+
+        var filmeDoPaulo = new Film();
+        filmeDoPaulo.setDurationInMinutes(200);
+        filmeDoPaulo.setName("Dogville");
+        filmeDoPaulo.setReleaseYear(2003);
+        filmeDoPaulo.rate(10);
+
+        ArrayList<Film> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(myFilm);
+        listaDeFilmes.add(otherFilm);
+
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro Filme: " + listaDeFilmes.get(0));
+        System.out.println(listaDeFilmes);
     }
 }
